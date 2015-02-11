@@ -1,3 +1,7 @@
 def calculate(dice)
-  dice.reduce(:+)
+  dice.inject(:+)
+end
+
+def aces(dice)
+   dice.select { |ace| ace == 1 }.inject(:+)
 end
