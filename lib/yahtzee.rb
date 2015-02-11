@@ -13,3 +13,7 @@ end
 def threes(dice)
   dice.select { |three| three == 3 }.inject(:+)
 end
+
+def fours(dice)
+  dice.select { |four| four == 4 }.inject(:+)
+end

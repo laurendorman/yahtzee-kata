@@ -2,7 +2,7 @@ require 'spec_helper'
 require_relative '../lib/yahtzee'
 
 describe 'Calculate' do
-it 'adds die' do
+  it 'adds die' do
 		expect(calculate([1,1,1,1,1])).to eq(5)
 	end
   it 'only add aces' do
@@ -13,5 +13,8 @@ it 'adds die' do
   end
   it 'only add threes' do
     expect(threes([3,3,3,4,5])).to eq(9)
+  end
+  it 'only add fours' do
+    expect(fours([4,4,5,5,6])).to eq(8)
   end
 end
