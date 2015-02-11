@@ -1,4 +1,4 @@
-def calculate(dice)
+def adds(dice)
   dice.inject(:+)
 end
 
