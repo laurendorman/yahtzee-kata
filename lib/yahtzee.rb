@@ -6,6 +6,10 @@ def aces(dice)
    dice.select { |ace| ace == 1 }.inject(:+)
 end
 
-def dueces(dice)
-   dice.select { |duece| duece == 2 }.inject(:+)
+def twos(dice)
+   dice.select { |two| two == 2 }.inject(:+)
+end
+
+def threes(dice)
+  dice.select { |three| three == 3 }.inject(:+)
 end
