@@ -8,4 +8,7 @@ describe 'Calculate' do
   it 'only add aces' do
     expect(aces([1,1,2,2,3])).to eq(2)
   end
+  it 'only add dueces' do
+    expect(dueces([1,1,2,2,3])).to eq(4)
+  end
 end
