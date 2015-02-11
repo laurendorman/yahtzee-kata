@@ -17,3 +17,7 @@ end
 def fours(dice)
   dice.select { |four| four == 4 }.inject(:+)
 end
+
+def fives(dice)
+  dice.select { |five| five == 5 }.inject(:+)
+end

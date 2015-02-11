@@ -17,4 +17,7 @@ describe 'Calculate' do
   it 'only add fours' do
     expect(fours([4,4,5,5,6])).to eq(8)
   end
+  it 'only add fives' do
+    expect(fives([4,4,5,5,6])).to eq(10)
+  end
 end
