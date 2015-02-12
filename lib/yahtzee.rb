@@ -29,3 +29,7 @@ end
 def three_of_a_kind(dice)
   dice.find { |die| dice.count(die) == 3 }
 end
+
+def four_of_a_kind(dice)
+  dice.find { |die| dice.count(die) == 4 }
+end

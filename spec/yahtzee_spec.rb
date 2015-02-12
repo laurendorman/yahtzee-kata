@@ -26,4 +26,7 @@ describe 'calculate' do
   it 'three of a kind' do
     expect(three_of_a_kind([4,4,4,6,6])).to eq(4)
   end
+  it 'four of a kind' do
+    expect(four_of_a_kind([1,1,1,1,5])).to eq(1)
+  end
 end
