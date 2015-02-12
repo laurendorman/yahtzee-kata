@@ -1,35 +1,39 @@
-def adds(dice)
-  dice.inject(:+)
-end
+class Game
 
-def aces(dice)
-  dice.select { |die| die == 1 }.inject(:+)
-end
+  def adds(dice)
+    dice.inject(:+)
+  end
 
-def twos(dice)
-  dice.select { |die| die == 2 }.inject(:+)
-end
+  def aces(dice)
+    dice.select { |die| die == 1 }.inject(:+)
+  end
 
-def threes(dice)
-  dice.select { |die| die == 3 }.inject(:+)
-end
+  def twos(dice)
+    dice.select { |die| die == 2 }.inject(:+)
+  end
 
-def fours(dice)
-  dice.select { |die| die == 4 }.inject(:+)
-end
+  def threes(dice)
+    dice.select { |die| die == 3 }.inject(:+)
+  end
 
-def fives(dice)
-  dice.select { |die| die == 5 }.inject(:+)
-end
+  def fours(dice)
+    dice.select { |die| die == 4 }.inject(:+)
+  end
 
-def sixes(dice)
-  dice.select { |die| die == 6 }.inject(:+)
-end
+  def fives(dice)
+    dice.select { |die| die == 5 }.inject(:+)
+  end
 
-def three_of_a_kind(dice)
-  dice.find { |die| dice.count(die) == 3 }
-end
+  def sixes(dice)
+    dice.select { |die| die == 6 }.inject(:+)
+  end
 
-def four_of_a_kind(dice)
-  dice.find { |die| dice.count(die) == 4 }
+  def three_of_a_kind(dice)
+    dice.find { |die| dice.count(die) == 3 }
+  end
+
+  def four_of_a_kind(dice)
+    dice.find { |die| dice.count(die) == 4 }
+  end
+
 end

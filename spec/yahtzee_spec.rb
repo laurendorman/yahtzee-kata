@@ -1,32 +1,32 @@
 require 'spec_helper'
 require_relative '../lib/yahtzee'
 
-describe 'calculate' do
+describe Game do
   it 'adds all die' do
-		expect(adds([1,2,3,4,5])).to eq(15)
+  		expect(subject.adds([1,2,3,4,5])).to eq(15)
 	end
   it 'only add aces' do
-    expect(aces([1,1,2,2,3])).to eq(2)
+    expect(subject.aces([1,1,2,2,3])).to eq(2)
   end
   it 'only add twos' do
-    expect(twos([1,1,2,2,3])).to eq(4)
+    expect(subject.twos([1,1,2,2,3])).to eq(4)
   end
   it 'only add threes' do
-    expect(threes([3,3,3,4,5])).to eq(9)
+    expect(subject.threes([3,3,3,4,5])).to eq(9)
   end
   it 'only add fours' do
-    expect(fours([4,4,5,5,6])).to eq(8)
+    expect(subject.fours([4,4,5,5,6])).to eq(8)
   end
   it 'only add fives' do
-    expect(fives([4,4,5,5,6])).to eq(10)
+    expect(subject.fives([4,4,5,5,6])).to eq(10)
   end
   it 'only add sixes' do
-    expect(sixes([3,4,5,6,6])).to eq(12)
+    expect(subject.sixes([3,4,5,6,6])).to eq(12)
   end
   it 'three of a kind' do
-    expect(three_of_a_kind([4,4,4,6,6])).to eq(4)
+    expect(subject.three_of_a_kind([4,4,6,6,4])).to eq(4)
   end
   it 'four of a kind' do
-    expect(four_of_a_kind([1,1,1,1,5])).to eq(1)
+    expect(subject.four_of_a_kind([1,1,5,1,1])).to eq(1)
   end
 end
