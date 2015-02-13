@@ -40,16 +40,23 @@ class Game
      dice.uniq.collect { |die| dice.count(die) }.sort == [2, 3]
      # Needs to return score of 25
   end
+
   def small_straight(dice)
     dice.sort[0..3] == [1,2,3,4] || dice.sort[1..4] == [1,2,3,4] || dice.sort[0..3] == [2,3,4,5] || dice.sort[1..4] == [2,3,4,5] || dice.sort[0..3] == [3,4,5,6] || dice.sort[1..4] == [3,4,5,6]
     # Needs to return score of 30
   end
+
   def large_straight(dice)
     dice.sort == [1,2,3,4,5] || dice.sort == [2,3,4,5,6]
     # Needs to return score of 40 
   end
+
   def yahtzee(dice)
     dice.uniq.count == 1
     # Needs to return score of 50 
+  end
+
+  def chance(dice)
+    dice.inject(:+)
   end
 end

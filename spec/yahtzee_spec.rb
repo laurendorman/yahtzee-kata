@@ -41,4 +41,7 @@ describe Game do
   it 'yahtzee' do
     expect(subject.yahtzee([2,2,2,2,2])).to eq(true)
   end
+  it 'chance' do
+    expect(subject.chance([2,2,3,5,6])).to eq(18)
+  end
 end
