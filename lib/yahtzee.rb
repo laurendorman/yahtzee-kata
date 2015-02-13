@@ -36,4 +36,11 @@ class Game
     dice.find { |die| dice.count(die) == 4 }
   end
 
+  def full_house(dice)
+     dice.uniq.collect { |die| dice.count(die) }.sort == [2, 3]
+     # Needs to output score of 25
+  end
+  def small_straight(dice)
+    dice.sort[0..3] == [1,2,3,4] || dice.sort[1..4] == [1,2,3,4] || dice.sort[0..3] == [2,3,4,5] || dice.sort[1..4] == [2,3,4,5] || dice.sort[0..3] == [3,4,5,6] || dice.sort[1..4] == [3,4,5,6]
+  end
 end

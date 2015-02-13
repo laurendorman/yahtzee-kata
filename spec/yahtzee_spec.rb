@@ -29,4 +29,10 @@ describe Game do
   it 'four of a kind' do
     expect(subject.four_of_a_kind([1,1,5,1,1])).to eq(1)
   end
+  it 'full house' do
+    expect(subject.full_house([3,4,4,4,3])).to eq(true)
+  end
+  it 'small straight' do
+    expect(subject.small_straight([2,4,1,3,6])).to eq(true)
+  end
 end
