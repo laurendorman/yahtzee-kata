@@ -35,4 +35,7 @@ describe Game do
   it 'small straight' do
     expect(subject.small_straight([2,4,1,3,6])).to eq(true)
   end
+  it 'large straight' do
+    expect(subject.large_straight([2,4,1,3,5])).to eq(true)
+  end
 end
