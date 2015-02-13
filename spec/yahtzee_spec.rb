@@ -38,4 +38,7 @@ describe Game do
   it 'large straight' do
     expect(subject.large_straight([2,4,1,3,5])).to eq(true)
   end
+  it 'yahtzee' do
+    expect(subject.yahtzee([2,2,2,2,2])).to eq(true)
+  end
 end
