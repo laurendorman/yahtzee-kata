@@ -59,4 +59,33 @@ class Game
   def chance(dice)
     dice.inject(:+)
   end
+
 end
+
+# class Score
+
+#   def standard_scoring(dice)
+#     dice.inject(:+)
+#   end
+
+#   def full_house_scoring(dice)
+#     dice == 25
+#   end
+
+#   def small_straight_scoring(dice)
+#     dice == 30
+#   end
+    
+#   def large_straight_scoring(dice)
+#     dice == 40
+#   end
+
+#   def yahtzee_scoring(dice)
+#     dice == 50
+#   end
+
+#   def chance_scoring(dice)
+#     dice.inject(:+)
+#   end
+
+# end
