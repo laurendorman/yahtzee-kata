@@ -13,8 +13,7 @@ class Score
   end
 
   def large_straight_scoring(dice)
-    dice.sort == [1,2,3,4,5] || dice.sort == [2,3,4,5,6]
-    dice.inject(:+)
+    (dice.sort == [1,2,3,4,5] || dice.sort == [2,3,4,5,6]) ? 40 : 0
   end
 
   def yahtzee_scoring(dice)
