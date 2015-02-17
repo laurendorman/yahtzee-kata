@@ -17,8 +17,7 @@ class Score
   end
 
   def yahtzee_scoring(dice)
-    dice.uniq.count == 1
-    dice.inject(:+)
+    (dice.uniq.count == 1) ? 50 : 0
   end
 
 end
