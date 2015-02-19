@@ -14,10 +14,16 @@ describe Score do
   it 'small straight scoring' do
     expect(subject.small_straight_scoring([1,2,3,4,6])).to eq(30)
   end
+  it 'small straight unsorted scoring' do
+    expect(subject.small_straight_scoring([6,3,2,4,1])).to eq(30)
+  end
   it 'large straight scoring' do
     expect(subject.large_straight_scoring([2,3,4,5,6])).to eq(40)
   end
-  it 'large straight scoring' do
+  it 'large straight unsorted scoring' do
+    expect(subject.large_straight_scoring([2,3,4,6,5])).to eq(40)
+  end
+  it 'yahtzee scoring' do
     expect(subject.yahtzee_scoring([2,2,2,2,2])).to eq(50)
   end
   it 'chance scoring' do
