@@ -41,13 +41,25 @@ class Game
      # Needs to return score of 25
   end
 
+  def match_first(left, right)
+    sorted_dice = left.sort
+    count = right.length-1
+    sorted_dice[0..count] == right
+  end
+
+  def match_last(left, right)
+    sorted_dice = left.sort
+    count = right.length-1
+    sorted_dice[1..count] == right
+  end
+
   def small_straight(dice)
-    dice.sort[0..3] == [1,2,3,4] || dice.sort[1..4] == [1,2,3,4] || dice.sort[0..3] == [2,3,4,5] || dice.sort[1..4] == [2,3,4,5] || dice.sort[0..3] == [3,4,5,6] || dice.sort[1..4] == [3,4,5,6]
+    (match_first(dice, [1,2,3,4] || [2,3,4,5] || [3,4,5,6]) || match_last(dice, [1,2,3,4] || [2,3,4,5] || [3,4,5,6]))
     # Needs to return score of 30
   end
 
   def large_straight(dice)
-    dice.sort == [1,2,3,4,5] || dice.sort == [2,3,4,5,6]
+    (match_first(dice, [1,2,3,4,5]) || match_first(dice, [2,3,4,5,6]))
     # Needs to return score of 40 
   end
 
@@ -61,31 +73,3 @@ class Game
   end
 
 end
-
-# class Score
-
-#   def standard_scoring(dice)
-#     dice.inject(:+)
-#   end
-
-#   def full_house_scoring(dice)
-#     dice == 25
-#   end
-
-#   def small_straight_scoring(dice)
-#     dice == 30
-#   end
-    
-#   def large_straight_scoring(dice)
-#     dice == 40
-#   end
-
-#   def yahtzee_scoring(dice)
-#     dice == 50
-#   end
-
-#   def chance_scoring(dice)
-#     dice.inject(:+)
-#   end
-
-# end
